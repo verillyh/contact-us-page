@@ -13,7 +13,6 @@ $(function() {
     $('#email-logo').attr('src', email_logo);
 
     $('#form').on('submit', e => {
-        e.preventDefault();
         emailjs.sendForm('service_b3qrptj', 'template_fukzufm', $('#form')[0])
             .then(response => {
                 console.log("SUCCESS", response.status, response.text);
