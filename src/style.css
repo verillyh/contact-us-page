@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+}
+
+
+label {
+  font-size: 12px;
+}
+
+.radio-button {
+  height: 9px;
+  border-radius: 0.375rem;
+  background-color: #efefef;
+  font-size: 0.75rem;
+}
+
+.radio-button:focus {
+  border: 2px solid #FA949D;
+  background-color: white;
+  color: #FA949D;
+}

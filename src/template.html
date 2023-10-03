@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Contact us</title>
+</head>
+<body class="bg-purple py-14">
+    <main class="m-auto w-[530px]">
+        <section class="text-white flex flex-col gap-2">
+            <h1 class="text-3xl font-bold tracking-wide text-center">Get in touch!</h1>
+            <p class="text-center">Contact us for a quote, help, or to join team</p>
+        </section>
+        <section class="grid grid-rows-1 grid-cols-[repeat(3,1fr)] text-white">
+            <button class="flex flex-col h-20 rounded-xl my-10 hover:bg-pink justify-evenly items-center text-xs"><img id="location-logo" class="w-8 h-8" alt="location logo"><p>102 Street 2714 Don</p></button>
+            <button class="flex flex-col h-20 rounded-xl my-10 hover:bg-pink justify-evenly items-center text-xs"><img id="telephone-logo" class="w-8 h-8" alt="telephone logo"><p>+02 1234 567</p></button>
+            <button class="flex flex-col h-20 rounded-xl my-10 hover:bg-pink justify-evenly items-center text-xs"><img id="email-logo" class="w-8 h-8" alt="email logo"><p>hello@flowbase.com</p></button>
+        </section>
+        <section class="bg-white rounded-xl p-6 pt-3">
+            <header class="font-medium text-sm my-7">Contact Form</header>
+            <form method="get" action="/" id="form">
+                <div class="mx-auto flex justify-between">
+                    <div class="container w-1/2 flex flex-col justify-between gap-5 ">
+                        <div class="flex flex-col gap-1">
+                            <label for="name">Your name</label>
+                            <input class="text-xs border-off-white border-2 rounded-md h-10  placeholder:text-xs p-1 peer invalid:caret-red-50 focus:bg-white bg-off-white" type="text" name="name" id="name" placeholder="John Doe" required>
+                            <p class="text-xs text-red peer-placeholder-shown:!hidden hidden peer-invalid:block">Please provide the correct details</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="Email">Email</label>
+                            <input class="text-xs border-off-white border-2 rounded-md h-10  placeholder:text-xs p-1 peer invalid:caret-red-50 focus:bg-white bg-off-white" type="email" name="email" id="email" placeholder="Your email" required>
+                            <p class="text-xs text-red peer-placeholder-shown:!hidden hidden peer-invalid:block">Please provide the correct details</p>
+                        </div>
+                        <div class="flex flex-col gap-1">
+                            <label for="phone">Phone number</label>
+                            <input class="text-xs border-off-white border-2 rounded-md h-10  placeholder:text-xs p-1 peer invalid:caret-red-50 focus:bg-white bg-off-white" type="tel" name="phone" id="phone" placeholder="Your number" pattern="[0-9]{11,14}" required>
+                            <p class="text-xs text-red peer-placeholder-shown:!hidden hidden peer-invalid:block">Please provide the correct details</p>
+                        </div>
+                    </div>
+                    <div class=" flex px-2 flex-col gap-1">
+                        <label for="message">Message</label>
+                        <textarea class="h-full w-auto bg-off-white rounded-sm py-3 px-5 text-xs resize-none rounded-md" name="message" id="message" placeholder="..." required></textarea>
+                    </div>
+                </div>
+                <div class="container mt-5 flex flex-col gap-5">
+                    <label class="text-sm font-medium" for="services">Services</label>
+                    <div class="grid grid-rows-1 grid-cols-[repeat(4,1fr)] gap-2">
+                        <input type="radio" id="web-design" name="services" value="web-design" class="peer/web-design hidden">
+                        <label for="web-design"  class="flex justify-center items-center bg-off-white text-center p-2.5 cursor-pointer select-none rounded-md peer-checked/web-design:bg-white peer-checked/web-design:border-pink peer-checked/web-design:border-2 peer-checked/web-design:text-pink">Web Design</label>
+
+                        <input type="radio" id="web-development" name="services" value="web-development" class="peer/web-development hidden">
+                        <label for="web-development"  class="flex items-center justify-center block bg-off-white text-center p-2.5 cursor-pointer select-none rounded-md peer-checked/web-development:bg-white peer-checked/web-development:border-pink peer-checked/web-development:border-2 peer-checked/web-development:text-pink">Web Design</label>
+
+                        <input type="radio" id="logo-design" name="services" value="logo-design" class="peer/logo-design hidden">
+                        <label for="logo-design"  class="flex justify-center items-center bg-off-white text-center p-2.5 cursor-pointer select-none rounded-md peer-checked/logo-design:bg-white peer-checked/logo-design:border-pink peer-checked/logo-design:border-2 peer-checked/logo-design:text-pink">Web Design</label>
+
+                        <input type="radio" id="other" name="services" value="other" class="peer/other hidden">
+                        <label for="other"  class="flex justify-center items-center bg-off-white text-center p-2.5 cursor-pointer select-none rounded-md peer-checked/other:bg-white peer-checked/other:border-pink peer-checked/other:border-2 peer-checked/other:text-pink">Web Design</label>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button id="submit" class="py-2.5 px-9 bg-pink text-white rounded-lg" type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
